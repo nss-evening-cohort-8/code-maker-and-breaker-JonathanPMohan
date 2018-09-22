@@ -13,9 +13,9 @@ const printToDom = (stringToPrint, divId) => {
         <div class="secretString">
           <h5 class="card-title">${toDo}</h5>
         </div>`;
-    
+        console.log(startWordInput.value)
         printToDom(newString, 'secretString');
-        console.log(startCodeButtonElem.value)
+       
     }
 
     startCodeButtonElem.addEventListener("click",(e) =>{
