@@ -12,19 +12,20 @@
                 <form class="text-light bg-secondary w-50 p-3">
                         <div class="form-group">
                             <label for="wordInput"></label>
-                              <input type="text" class="form-control" id="toDoInput" aria-describedby="emailHelp" placeholder="">
-                              <button type="submit" id ="submitButton" class="btn btn-primary w-100">Convert To Secret</button>
+                              <input type="text" class="form-control" id="startWordInput" aria-describedby="emailHelp" placeholder="">
+                              <button type="submit" id ="startCodeButton" class="btn btn-primary w-100">Convert To Secret</button>
                             </div></form>
                           
                         </div>
-                        <p></p>
+                        <div id="secretString" class="d-flex flex-wrap"></div>
 
                         <form class="text-light bg-secondary w-50 p-3">
                                 <div class="form-group">
-                                    <label for="wordInput"></label>
-                                      <input type="text" class="form-control" id="toDoInput" aria-describedby="emailHelp" placeholder="">
-                                      <button type="submit" id ="submitButton" class="btn btn-primary w-100">Convert To Words</button>
+                                    <label for="numberInput"></label>
+                                      <input type="text" class="form-control" id="secretNumberInput" aria-describedby="emailHelp" placeholder="">
+                                      <button type="submit" id ="endCodeButton" class="btn btn-primary w-100">Convert To Words</button>
                                     </div></form>
+                        <div id="reverseString" class="d-flex flex-wrap"></div>          
 
 <script src="main.js"></script>    
 </body>
