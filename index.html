@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Code Maker & Breaker</title>
+</head>
+<body>
+        <div class="d-flex justify-content-left">
+                <form class="text-light bg-secondary w-50 p-3">
+                        <div class="form-group">
+                            <label for="wordInput"></label>
+                              <input type="text" class="form-control" id="startWordInput" aria-describedby="emailHelp" placeholder="">
+                              <button type="submit" id ="startCodeButton" class="btn btn-primary w-100">Convert To Secret</button>
+                            </div></form>
+                          
+                        </div>
+                        <div id="secretString" class="d-flex flex-wrap"></div>
+
+                        <form class="text-light bg-secondary w-50 p-3">
+                                <div class="form-group">
+                                    <label for="numberInput"></label>
+                                      <input type="text" class="form-control" id="secretNumberInput" aria-describedby="emailHelp" placeholder="">
+                                      <button type="submit" id ="endCodeButton" class="btn btn-primary w-100">Convert To Words</button>
+                                    </div></form>
+                        <div id="reverseString" class="d-flex flex-wrap"></div>          
+
+<script src="main.js"></script>    
+</body>
+</html>
