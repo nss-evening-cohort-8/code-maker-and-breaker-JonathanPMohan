@@ -11,17 +11,28 @@ const printToDom = (stringToPrint, divId) => {
     // Function for Word Input //
 
     const printSecretString = (word) => { 
+        let codedArray = [];
+        // let newString = ''  
+        //     newString += `<div class="card w-15 m-4">
+        //         <div class="secretString">
+        //     <h5 class="card-title">${word.charCodeAt(i)}</h5>
+        //     </div>`;
 
         word = startWordInput.value;
+
         for (let i = 0; i < word.length; i++) {
-            console.log(word.charCodeAt(i))
-        let newString = ''   
-            newString += `<div class="card w-15 m-4">
-            <div class="secretString">
-            <h5 class="card-title">${word.charCodeAt(i)}</h5>
-            </div>`;
-        printToDom(newString, 'secretString');
+            codedArray.push(word.charCodeAt(i))
+        
         }
+
+        let codeString = ''
+
+        for (let i = 0; i < codedArray.length; i++) {
+            codeString += `${codedArray[i]}, `    
+        }
+        
+        printToDom(codeString, 'secretString');
+       
        
     }
     // Event listener for Word Input button //
@@ -33,18 +44,35 @@ const printToDom = (stringToPrint, divId) => {
 
     // Function for Reverse Secret Code // 
 
-const printReverseString = (toDo) => {
-        let newString = `<div class="card w-15 m-4">
-        <div class="card-body">
-          <h5 class="card-title">${toDo}</h5>
-      </div>`;
-    
-        printToDom(newString, 'reverseString');
-}
+    const printCodedString = (word) => { 
+        let codedArray = [];
+        // let newString = ''  
+        //     newString += `<div class="card w-15 m-4">
+        //         <div class="secretString">
+        //     <h5 class="card-title">${word.charCodeAt(i)}</h5>
+        //     </div>`;
+
+        word = secretNumberInput.value;
+        console.log(word);
+
+        for (let i = 0; i < word.length; i++) {
+            codedArray.push(String.fromCharCode(i))
+        
+        }
+
+        let codeString = ''
+
+        for (let i = 0; i < codedArray.length; i++) {
+            codeString += `${codedArray[i]}`    
+        }
+        
+        printToDom(codeString, 'reverseString');
+    }
 
     // Event listener For Reverse Secret Code //
 
     endCodeButtonElem.addEventListener("click",(e) => {
         e.preventDefault();
-        printReverseString();
+        printCodedString();
+       
     });
