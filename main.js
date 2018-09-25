@@ -12,11 +12,6 @@ const printToDom = (stringToPrint, divId) => {
 
     const printSecretString = (word) => { 
         let codedArray = [];
-        // let newString = ''  
-        //     newString += `<div class="card w-15 m-4">
-        //         <div class="secretString">
-        //     <h5 class="card-title">${word.charCodeAt(i)}</h5>
-        //     </div>`;
 
         word = startWordInput.value;
 
@@ -46,17 +41,12 @@ const printToDom = (stringToPrint, divId) => {
 
     const printCodedString = (word) => { 
         let codedArray = [];
-        // let newString = ''  
-        //     newString += `<div class="card w-15 m-4">
-        //         <div class="secretString">
-        //     <h5 class="card-title">${word.charCodeAt(i)}</h5>
-        //     </div>`;
-
-        word = secretNumberInput.value;
-        console.log(word);
+      
+        word = secretNumberInput.value.split(', ');
+       
 
         for (let i = 0; i < word.length; i++) {
-            codedArray.push(String.fromCharCode(i))
+            codedArray.push(String.fromCharCode(word[i]))
         
         }
 
@@ -76,3 +66,7 @@ const printToDom = (stringToPrint, divId) => {
         printCodedString();
        
     });
+
+
+// Function To Register Events //
+
